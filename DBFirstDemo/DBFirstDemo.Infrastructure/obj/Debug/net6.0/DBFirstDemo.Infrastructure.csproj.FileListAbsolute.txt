@@ -1,0 +1,14 @@
+D:\Entity Framework Core\DBFirstDemo\DBFirstDemo.Infrastructure\bin\Debug\net6.0\DBFirstDemo.Infrastructure.deps.json
+D:\Entity Framework Core\DBFirstDemo\DBFirstDemo.Infrastructure\bin\Debug\net6.0\DBFirstDemo.Infrastructure.runtimeconfig.json
+D:\Entity Framework Core\DBFirstDemo\DBFirstDemo.Infrastructure\bin\Debug\net6.0\DBFirstDemo.Infrastructure.dll
+D:\Entity Framework Core\DBFirstDemo\DBFirstDemo.Infrastructure\bin\Debug\net6.0\DBFirstDemo.Infrastructure.pdb
+D:\Entity Framework Core\DBFirstDemo\DBFirstDemo.Infrastructure\obj\Debug\net6.0\DBFirstDemo.Infrastructure.csproj.AssemblyReference.cache
+D:\Entity Framework Core\DBFirstDemo\DBFirstDemo.Infrastructure\obj\Debug\net6.0\DBFirstDemo.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Entity Framework Core\DBFirstDemo\DBFirstDemo.Infrastructure\obj\Debug\net6.0\DBFirstDemo.Infrastructure.AssemblyInfoInputs.cache
+D:\Entity Framework Core\DBFirstDemo\DBFirstDemo.Infrastructure\obj\Debug\net6.0\DBFirstDemo.Infrastructure.AssemblyInfo.cs
+D:\Entity Framework Core\DBFirstDemo\DBFirstDemo.Infrastructure\obj\Debug\net6.0\DBFirstDemo.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Entity Framework Core\DBFirstDemo\DBFirstDemo.Infrastructure\obj\Debug\net6.0\DBFirstDemo.Infrastructure.dll
+D:\Entity Framework Core\DBFirstDemo\DBFirstDemo.Infrastructure\obj\Debug\net6.0\refint\DBFirstDemo.Infrastructure.dll
+D:\Entity Framework Core\DBFirstDemo\DBFirstDemo.Infrastructure\obj\Debug\net6.0\DBFirstDemo.Infrastructure.pdb
+D:\Entity Framework Core\DBFirstDemo\DBFirstDemo.Infrastructure\obj\Debug\net6.0\DBFirstDemo.Infrastructure.genruntimeconfig.cache
+D:\Entity Framework Core\DBFirstDemo\DBFirstDemo.Infrastructure\obj\Debug\net6.0\ref\DBFirstDemo.Infrastructure.dll
