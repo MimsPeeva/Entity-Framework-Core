@@ -1,0 +1,14 @@
+D:\Entity Framework Core\EntityRelations\P02_FootballBetting\P02_FootballBetting.Data.Common\bin\Debug\net6.0\P02_FootballBetting.Data.Common.deps.json
+D:\Entity Framework Core\EntityRelations\P02_FootballBetting\P02_FootballBetting.Data.Common\bin\Debug\net6.0\P02_FootballBetting.Data.Common.runtimeconfig.json
+D:\Entity Framework Core\EntityRelations\P02_FootballBetting\P02_FootballBetting.Data.Common\bin\Debug\net6.0\P02_FootballBetting.Data.Common.dll
+D:\Entity Framework Core\EntityRelations\P02_FootballBetting\P02_FootballBetting.Data.Common\bin\Debug\net6.0\P02_FootballBetting.Data.Common.pdb
+D:\Entity Framework Core\EntityRelations\P02_FootballBetting\P02_FootballBetting.Data.Common\obj\Debug\net6.0\P02_FootballBetting.Data.Common.csproj.AssemblyReference.cache
+D:\Entity Framework Core\EntityRelations\P02_FootballBetting\P02_FootballBetting.Data.Common\obj\Debug\net6.0\P02_FootballBetting.Data.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\Entity Framework Core\EntityRelations\P02_FootballBetting\P02_FootballBetting.Data.Common\obj\Debug\net6.0\P02_FootballBetting.Data.Common.AssemblyInfoInputs.cache
+D:\Entity Framework Core\EntityRelations\P02_FootballBetting\P02_FootballBetting.Data.Common\obj\Debug\net6.0\P02_FootballBetting.Data.Common.AssemblyInfo.cs
+D:\Entity Framework Core\EntityRelations\P02_FootballBetting\P02_FootballBetting.Data.Common\obj\Debug\net6.0\P02_FootballBetting.Data.Common.csproj.CoreCompileInputs.cache
+D:\Entity Framework Core\EntityRelations\P02_FootballBetting\P02_FootballBetting.Data.Common\obj\Debug\net6.0\P02_FootballBetting.Data.Common.dll
+D:\Entity Framework Core\EntityRelations\P02_FootballBetting\P02_FootballBetting.Data.Common\obj\Debug\net6.0\refint\P02_FootballBetting.Data.Common.dll
+D:\Entity Framework Core\EntityRelations\P02_FootballBetting\P02_FootballBetting.Data.Common\obj\Debug\net6.0\P02_FootballBetting.Data.Common.pdb
+D:\Entity Framework Core\EntityRelations\P02_FootballBetting\P02_FootballBetting.Data.Common\obj\Debug\net6.0\P02_FootballBetting.Data.Common.genruntimeconfig.cache
+D:\Entity Framework Core\EntityRelations\P02_FootballBetting\P02_FootballBetting.Data.Common\obj\Debug\net6.0\ref\P02_FootballBetting.Data.Common.dll
