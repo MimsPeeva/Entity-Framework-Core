@@ -10,6 +10,6 @@
 
         public bool IsYoungDriver { get; set; }
 
-        public ICollection<Sale> Sales { get; set; } = new List<Sale>(); 
+        public ICollection<Sale> Sales { get; set; } = new List<Sale>();
     }
 }
