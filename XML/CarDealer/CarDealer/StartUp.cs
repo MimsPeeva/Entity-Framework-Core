@@ -47,6 +47,7 @@ namespace CarDealer
 
 
         }
+
         //9
         public static string ImportSuppliers(CarDealerContext context, string inputXml)
         {
@@ -56,7 +57,9 @@ namespace CarDealer
             using (var reader = new StringReader(inputXml))
             {
                 importDtos = (SupplierImportDto[])xmlSerializer.Deserialize(reader);
-            };
+            }
+
+            ;
 
             Supplier[] suppliers = importDtos
                 .Select(dto => new Supplier()
@@ -192,6 +195,7 @@ namespace CarDealer
 
             return $"Successfully imported {cars.Count}";
         }
+
         //12
         public static string ImportCustomers(CarDealerContext context, string inputXml)
         {
@@ -207,9 +211,9 @@ namespace CarDealer
             Customer[] customers = customersDtos
                 .Select(dto => new Customer()
                 {
-                   Name = dto.Name,
-                   BirthDate = dto.BirthDate,
-                   IsYoungDriver = dto.IsYoungDriver
+                    Name = dto.Name,
+                    BirthDate = dto.BirthDate,
+                    IsYoungDriver = dto.IsYoungDriver
                 })
                 .ToArray();
 
@@ -261,7 +265,7 @@ namespace CarDealer
             SalesImportDto[] saleImportDtos = (SalesImportDto[])xmlSerializer.Deserialize(reader);
 
             int[] carIds = context.Cars
-                .Select(c=>c.Id)
+                .Select(c => c.Id)
                 .ToArray();
 
             //var validSalesImport = saleImportDtos
@@ -301,6 +305,7 @@ namespace CarDealer
 
             return $"Successfully imported {sales.Count}";
         }
+
         //14
         public static string GetCarsWithDistance(CarDealerContext context)
         {
@@ -308,16 +313,17 @@ namespace CarDealer
                 .Where(c => c.TraveledDistance > 2000000)
                 .Select(c => new CarWithDistanceDto()
                 {
-                 Make = c.Make,
-                   Model = c.Model,
-                   TraveledDistance = c.TraveledDistance
+                    Make = c.Make,
+                    Model = c.Model,
+                    TraveledDistance = c.TraveledDistance
                 })
-                .OrderBy(c=>c.Make)
-                .ThenBy(c=>c.Model)
+                .OrderBy(c => c.Make)
+                .ThenBy(c => c.Model)
                 .Take(10)
                 .ToArray();
             return SerializeToXml(carWithDistance, "cars");
         }
+
         //15
         public static string GetCarsFromMakeBmw(CarDealerContext context)
         {
@@ -335,11 +341,12 @@ namespace CarDealer
 
             return SerializeToXml(bmws, "cars", true);
         }
+
         //16
         public static string GetLocalSuppliers(CarDealerContext context)
         {
             var localSuppliers = context.Suppliers
-                .Where(s => s.IsImporter==false)
+                .Where(s => s.IsImporter == false)
                 .Select(s => new GetLocalSuppliersDto()
                 {
                     Id = s.Id,
@@ -348,6 +355,7 @@ namespace CarDealer
                 }).ToArray();
             return SerializeToXml(localSuppliers, "suppliers");
         }
+
         //17
         public static string GetCarsWithTheirListOfParts(CarDealerContext context)
         {
@@ -371,23 +379,24 @@ namespace CarDealer
 
             return SerializeToXml(carsWithParts, "cars");
         }
+
         //18
-         public static string GetTotalSalesByCustomer(CarDealerContext context)
+        public static string GetTotalSalesByCustomer(CarDealerContext context)
         {
             var temp = context.Customers
                 .Where(c => c.Sales.Count > 0)
                 .Select(c => new
                 {
                     FullName = c.Name,
-                   BoughtCars =  c.Sales.Count,
-                   SalesInfo = c.Sales.Select
-                           (s => new
-                           {
-                               Prices = c.IsYoungDriver
-                               ? s.Car.PartsCars.Sum(s => Math.Round((double)s.Part.Price*0.95, 2))
-                               : s.Car.PartsCars.Sum(s => (double)s.Part.Price)
-                           })
-                       .ToArray()
+                    BoughtCars = c.Sales.Count,
+                    SalesInfo = c.Sales.Select
+                        (s => new
+                        {
+                            Prices = c.IsYoungDriver
+                                ? s.Car.PartsCars.Sum(s => Math.Round((double)s.Part.Price * 0.95, 2))
+                                : s.Car.PartsCars.Sum(s => (double)s.Part.Price)
+                        })
+                        .ToArray()
                 })
                 .ToList();
 
@@ -404,10 +413,10 @@ namespace CarDealer
             return SerializeToXml(customers, "customers");
         }
         //19
+
         public static string GetSalesWithAppliedDiscount(CarDealerContext context)
         {
-            SaleWithDiscount[] salesDtos = context
-                .Sales
+            var sales = context.Sales
                 .Select(s => new SaleWithDiscount()
                 {
                     Car = new CarDto()
@@ -418,13 +427,17 @@ namespace CarDealer
                     },
                     Discount = (int)s.Discount,
                     CustomerName = s.Customer.Name,
-                    Price = s.Car.PartsCars.Sum(p => p.Part.Price),
-                    PriceWithDiscount = Math.Round((double)(s.Car.PartsCars.Sum(p => p.Part.Price) * (1 - (s.Discount / 100))), 4)
-                })
-                .ToArray();
+                    Price = s.Car.PartsCars
+                        .Sum(pc => pc.Part.Price),
+                    PriceWithDiscount = Math.Round(
+                        (double)(s.Car.PartsCars.Sum(p => p.Part.Price)
+                                 * (1 - (s.Discount / 100))), 4)
+                }).ToArray();
 
-            return SerializeToXml(salesDtos, "sales");
+            return SerializeToXml(sales, "sales");
         }
+
+
         private static string SerializeToXml<T>(T dto, string xmlRootAttribute, bool omitDeclaration = false)
         {
             XmlSerializer xmlSerializer = new XmlSerializer(typeof(T), new XmlRootAttribute(xmlRootAttribute));
