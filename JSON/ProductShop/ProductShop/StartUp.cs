@@ -17,8 +17,8 @@ namespace ProductShop
             //string usersFile = File.ReadAllText("../../../Datasets/users.json");
             //Console.WriteLine(ImportUsers(context, usersFile));
             //02
-            //string productsFile = File.ReadAllText("../../../Datasets/products.json");
-            //Console.WriteLine(ImportProducts(context, productsFile));
+            string productsFile = File.ReadAllText("../../../Datasets/products.json");
+            Console.WriteLine(ImportProducts(context, productsFile));
             //03
             //string categoriesFile = File.ReadAllText("../../../Datasets/categories.json");
             //Console.WriteLine(ImportCategories(context, categoriesFile));

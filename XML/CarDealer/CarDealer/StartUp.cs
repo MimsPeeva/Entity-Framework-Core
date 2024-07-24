@@ -425,7 +425,7 @@ namespace CarDealer
                         Model = s.Car.Model,
                         TraveledDistance = s.Car.TraveledDistance
                     },
-                    Discount = (int)s.Discount,
+                    Discount = Math.Round((double)s.Discount,2),
                     CustomerName = s.Customer.Name,
                     Price = s.Car.PartsCars
                         .Sum(pc => pc.Part.Price),
